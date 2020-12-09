@@ -1,17 +1,19 @@
 import React from 'react';
+import Book from "../Book/book";
 
 const BookViewer = (props) => {
+    {console.log(props)}
     return ( 
+        
         <div className="row row-spacer">
-            <div className="col">
-                <button onClick={() => this.goToPreviousBook()}>Previous Book</button>
+            <div className="col-md-4">
+                <button onClick={() => props.previousBook()}>Previous Book</button>
             </div>
-            <div className="col">
-                <h1>{this.books[this.state.bookNumber].title}</h1>
-                <h4>{this.books[this.state.bookNumber].author}</h4>
+            <div className="col-md-4">
+                <Book book={props.book}/>
             </div>
-            <div className="col">
-                <button onClick={() => this.goToNextBook()}>Next Book</button>
+            <div className="col-md-4">
+                <button onClick={() => props.nextBook()}>Next Book</button>
             </div>
         </div>
     );
