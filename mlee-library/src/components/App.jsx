@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import "./App.css"
+import TitleBar from "./TitleBar/TileBar";
 
 class App extends Component {
     constructor(props){
@@ -7,7 +9,10 @@ class App extends Component {
     }
     render(){
         return(
-            <h1>Our React App from a Component File</h1>
+            <div className="container-fluid">
+                <TitleBar />
+
+            </div>
         )
     }
 }
